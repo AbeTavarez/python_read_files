@@ -1,4 +1,9 @@
-import openxl
+import openpyxl
 import os
 
-os.chdir('/Users/efrentavarez/Downloads/example.xlsx')
+os.chdir('/Users/efrentavarez/Downloads')
+
+
+workbook = openpyxl.load_workbook('example.xlsx')
+
+type(workbook)
