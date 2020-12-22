@@ -1,15 +1,22 @@
 import openpyxl
 import os
 
-# os.chdir('/Users/efrentavarez/Downloads')
+# User if file is in a different directory
+os.chdir('/Users/<username>/Downloads')
 
-
+# Load workbook by name
 workbook = openpyxl.load_workbook('example.xlsx')
 
+# Shows type
 print(type(workbook))
 
-sheet = workbook.get_sheet_by_name('Sheet1')
-# print(sheet)
+# Grabs sheet by name
+sheet = workbook['Sheet1']
+print(sheet)
 
-list_sheet = workbook.sheetnames()
+# returns array of sheets
+list_sheet = workbook.sheetnames
 print(list_sheet)
+
+# Gets cell from a sheet
+print(sheet['A1'])
